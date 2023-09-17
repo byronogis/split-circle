@@ -75,7 +75,7 @@
         ${this.parts.map((t,s)=>ar`
           <li
             class="circle-part"
-            data-part=${t}
+            data-part=${JSON.stringify(t)}
             style=${gr({"--part":s+1})}
             @click=${this._dispatchEvent}
           >
@@ -87,4 +87,4 @@
           </li>
         `)}
       </ul>
-    `}_dispatchEvent(t){var s;if((s=t.currentTarget)!=null&&s.classList.contains("circle-part")){const n=t.currentTarget.dataset.part;this.dispatchEvent(new CustomEvent("partclick",{detail:{part:n}}))}}}mi(mn,"properties",{name:{},parts:{type:Array},radius:{type:String},styles:{}});mi(mn,"styles",[vc]);const _r={__proto__:null,SplitCircle:mn};function $c(){Object.keys(_r).forEach(e=>{const t=e.replace(/([A-Z])/g,"-$1").toLowerCase().slice(1),s=_r[e];window.customElements.define(t,s)})}const Ac=(e,t)=>{const s=e.__vccOpts||e;for(const[n,r]of t)s[n]=r;return s},xc={class:"playground-vue"},Ec=["slot"],wc={__name:"App",setup(e){const t=uo(3),s=ui(()=>Array.from({length:t.value},(r,i)=>i+1));function n(r){alert(`Part ${r.detail.part} clicked!`)}return(r,i)=>{const o=zo("split-circle");return ys(),$s("div",xc,[Oe(o,{parts:s.value,onPartclick:n},{default:kr(()=>[(ys(!0),$s(pe,null,Vo(s.value,(l,u)=>(ys(),$s("span",{key:u,slot:u},Ii(l),9,Ec))),128))]),_:1},8,["parts"]),Mo(hn("input",{"onUpdate:modelValue":i[0]||(i[0]=l=>t.value=l),class:"playground-vue-input",type:"number",min:"3"},null,512),[[Jl,t.value]])])}}},Cc=Ac(wc,[["__scopeId","data-v-37d8d67b"]]);$c();const Tc=Xl(Cc);Tc.mount("#app");
+    `}_dispatchEvent(t){var s;if((s=t.currentTarget)!=null&&s.classList.contains("circle-part")){const n=JSON.parse(t.currentTarget.dataset.part);this.dispatchEvent(new CustomEvent("partclick",{detail:{part:n}}))}}}mi(mn,"properties",{name:{},parts:{type:Array},radius:{type:String},styles:{}});mi(mn,"styles",[vc]);const _r={__proto__:null,SplitCircle:mn};function $c(){Object.keys(_r).forEach(e=>{const t=e.replace(/([A-Z])/g,"-$1").toLowerCase().slice(1),s=_r[e];window.customElements.define(t,s)})}const Ac=(e,t)=>{const s=e.__vccOpts||e;for(const[n,r]of t)s[n]=r;return s},xc={class:"playground-vue"},Ec=["slot"],wc={__name:"App",setup(e){const t=uo(3),s=ui(()=>Array.from({length:t.value},(r,i)=>i+1));function n(r){console.log(r.detail)}return(r,i)=>{const o=zo("split-circle");return ys(),$s("div",xc,[Oe(o,{parts:s.value,onPartclick:n},{default:kr(()=>[(ys(!0),$s(pe,null,Vo(s.value,(l,u)=>(ys(),$s("span",{key:u,slot:u},Ii(l),9,Ec))),128))]),_:1},8,["parts"]),Mo(hn("input",{"onUpdate:modelValue":i[0]||(i[0]=l=>t.value=l),class:"playground-vue-input",type:"number",min:"3"},null,512),[[Jl,t.value]])])}}},Cc=Ac(wc,[["__scopeId","data-v-1b32ed1e"]]);$c();const Tc=Xl(Cc);Tc.mount("#app");

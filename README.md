@@ -1,70 +1,30 @@
-# web-component-starter
+# split-circle
 
-A starter kit for building web components with [lit](https://lit.dev/).
+[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/split-circle)
 
-## Start
+> Split a circle into a number of equal parts
+> web component, so you can use it in any framework
 
-### Clone with degit
+## API
 
-```bash
-npx degit byronogis/web-component-starter my-component
-cd my-component
-pnpm i
-```
+### Props
 
-### Github Template
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `parts` | `array` | `[1,2,3,4,5,6,7,8]` | data of circle, used in show and event |
+| `radius` | `string` | `100px` | the radius of circle |
 
-[Create a repo from this template on GitHub.](https://github.com/byronogis/web-component-starter/generate)
+### Events
 
-## Checklist
+| Name | Description |
+| --- | --- |
+| `partclick` | click event, return a CustomEvent Object, you can find part data in `event.detail.part` |
 
-- Change `web-component-starter`, `WebComponentStarter` with your component name.
-- Rename `packages/core/src/components/WebComponentStarter.js` with your component name.
-- Change the author name in LICENSE.
-- Clean up the READMEs.
+## Demo
 
-## Repo Usage
+### Vue
 
-### Multi-Component
-
-Add more components by creating new files in `packages/core/src/components` and aggregating them in `packages/core/src/components/index.js`.
-
-### Development
-
-```bash
-pnpm dev
-```
-
-### Build
-
-```bash
-pnpm build
-```
-
-## Component Usage
-
-### define all components
-
-```js
-import { defineWebComponents } from 'web-component-starter'
-
-defineWebComponents()
-```
-
-### or define a single component
-
-```js
-import { defineWebComponent } from 'web-component-starter'
-import { WebComponentStarter } from 'web-component-starter/components'
-
-defineWebComponent('web-component-starter', WebComponentStarter)
-```
-
-### use in html
-
-```html
-<web-component-starter></web-component-starter>
-```
+[playground-vue](./playground//vue/src/App.vue)
 
 ## License
 

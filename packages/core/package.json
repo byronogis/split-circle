@@ -1,0 +1,46 @@
+{
+  "name": "split-circle",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.6.12",
+  "description": "",
+  "author": "Byron",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/byronogis",
+  "homepage": "https://github.com/byronogis/split-circle#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byronogis/split-circle.git"
+  },
+  "bugs": "https://github.com/byronogis/split-circle/issues",
+  "keywords": [
+    "web-component"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./components": {
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "release": "pnpm build && bumpp && npm publish"
+  },
+  "dependencies": {
+    "lit": "^2.8.0"
+  },
+  "devDependencies": {
+    "bumpp": "^9.2.0",
+    "unbuild": "^2.0.0"
+  }
+}

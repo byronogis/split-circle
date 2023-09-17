@@ -1,0 +1,13 @@
+{
+  "name": "playground-vue",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "split-circle": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4"
+  }
+}

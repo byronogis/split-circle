@@ -1,0 +1,3 @@
+<template>
+  <split-circle />
+</template>

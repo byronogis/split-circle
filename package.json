@@ -1,0 +1,29 @@
+{
+  "name": "monorepo",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.6.12",
+  "description": "",
+  "scripts": {
+    "dev": "pnpm -F './playground/*' dev",
+    "build": "pnpm -F split-circle build",
+    "release": "pnpm -F split-circle release",
+    "deploy": "pnpm -F docs deploy",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.41.0",
+    "@types/node": "^20.6.0",
+    "eslint": "^8.49.0",
+    "lint-staged": "^14.0.1",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

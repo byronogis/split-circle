@@ -1,0 +1,9 @@
+{
+  "name": "playground-vanills",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "split-circle": "workspace:*"
+  }
+}

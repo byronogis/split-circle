@@ -1,0 +1,17 @@
+{
+  "name": "docs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "pnpm build && gh-pages -d dist && rimraf dist"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "split-circle": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "gh-pages": "^6.0.0",
+    "rimraf": "^5.0.1"
+  }
+}

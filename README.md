@@ -20,11 +20,15 @@
 | --- | --- |
 | `partclick` | click event, return a CustomEvent Object, you can find part data in `event.detail.part` |
 
-## Demo
+## Example
+
+### Vanilla
+
+[playground-vanilla](./playground/vanilla/src/main.js)
 
 ### Vue
 
-[playground-vue](./playground//vue/src/App.vue)
+[playground-vue](./playground/vue/src/App.vue)
 
 ## License
 
